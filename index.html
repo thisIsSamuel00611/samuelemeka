@@ -535,7 +535,7 @@
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
-                                <div class="control-group col-sm-12">
+                                <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
                                         required="required" data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
@@ -559,7 +559,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton" onclick="sendEmail()">Send
                                     Message</button>
                             </div>
                         </form>
@@ -631,10 +631,10 @@
         function sendEmail() {
             Email.send({
                 Host: "smtp.gmail.com",
-                Username: document.getElementById('email').value,
+                Username: 'samuelemeka2021@outlook.com',
                 Password: "samuel2006go",
                 To: 'geeksam0611@gmail.com',
-                From: document.getElementById('email').value,
+                From: 'samuelemeka2021@outlook.com',
                 Subject: "Sending Email using javascript",
                 Body: "Well that was easy!!",
             })
